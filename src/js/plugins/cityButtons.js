@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import { onLoadHtmlSucess } from '../core/includes'
 
 const duration = 600
 
@@ -39,4 +40,6 @@ $.fn.cityButtons = function(){
     return this
 }
 
-$('[wm-city-buttons]').cityButtons()
+onLoadHtmlSucess(function(){
+    $('[wm-city-buttons]').cityButtons()
+})
